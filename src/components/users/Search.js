@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import PropTypes from "prop-types";
 
-const Search = ({ seachUsers, showClear, clearUsers, setAlert}) => {
+const Search = ({ searchUsers, showClear, clearUsers, setAlert}) => {
   const [text, setText] = useState('');
 
   const onSubmit = (e) => {
@@ -9,7 +9,7 @@ const Search = ({ seachUsers, showClear, clearUsers, setAlert}) => {
     if (text === "") {
      setAlert("Please enter something", "light");
     } else {
-      searchUsers(this.state.text);
+      searchUsers(text);
       setText('');
     }
   };
